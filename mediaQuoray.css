@@ -1,0 +1,59 @@
+@media (min-width: 500px) {
+    .card {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        grid-template-areas: 
+            "avatar content"
+        ;
+
+        margin: 0 4em;
+        padding-right: 2em;
+        padding-bottom: 2em;
+    }
+
+    .card > .avatar {
+        position: initial;
+        display: block;
+        grid-area: avatar;
+        margin-left: -3.5em;
+        margin-top: 1em;
+    }
+
+    .card > .card-details {
+        grid-area: content;
+        margin-left: 1.5em;
+    }
+
+    .card > .card-details > a {
+        display: inline-block;
+        padding: .8em 3em;
+    }
+}
+
+
+
+@media (min-width: 1000px) {
+    .card > .card-details {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        grid-template-areas: 
+            "name description"
+            "cta description"
+        ;
+    }
+
+    .card > .card-details > h1 {
+        grid-area: name;
+    }
+
+    .card > .card-details > p {
+        grid-area: description;
+        margin: 2.8em 0 0 2em;
+    }
+
+    .card > .card-details > a {
+        grid-area: cta;
+        padding: .5em .6em;
+        margin-top: 0;
+    }
+}
